@@ -23,7 +23,7 @@ const getSkill = async (req,res) => {
 
         res.status(200).json({success: true, data: allSkill})
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         res.status(400).json(error)
     }
 }
