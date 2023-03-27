@@ -14,7 +14,7 @@ const Skills = () => {
     useEffect(() => {
       const fetchProjects = async () =>{
         try {
-          const response = await fetch('http://localhost:8080/api/v1/skills',{
+          const response = await fetch('https://sp-tem0.onrender.com/api/v1/skills',{
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -24,7 +24,6 @@ const Skills = () => {
           if(response.ok){
             const result = await response.json();
             setSkills(result.data)
-            console.log(`this work ${skills}`)
           } else {console.log('this is error')}
         } catch (error) {
           console.log(error)

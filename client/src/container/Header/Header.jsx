@@ -20,8 +20,8 @@ const scaleVariants = {
 const Header = () => {
   return (
     <div id='home' className='app__header app__flex'>
-<div class="area" >
-            <ul class="circles">
+<div className="area" >
+            <ul className="circles">
               <img src={images.circle} alt="" />
               <img src={images.circle} alt="" />
               <img src={images.circle} alt="" />

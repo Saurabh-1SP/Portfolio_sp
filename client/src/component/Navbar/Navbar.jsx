@@ -27,29 +27,29 @@ Navbar = () => {
         ))}
       </ul>
       <div className="app__navbar-menu">
-        {/* <HiMenuAlt4 onClick={()=> setToggle(true)} /> */}
+          {/* <HiMenuAlt4 onClick={()=> setToggle(true)} /> */}
 
-        {toggle ? (
-          <motion.div
-          whileInView={{ x:[300, 0]}}
-          transition={{duration:0.85,ease: 'easeOut'}}
-          >
-            <HiX onClick={()=> setToggle(false)}/>
-            <ul > 
-        {['Home' , 'About', 'Work', 'Skills', 'Contact'].map((items,index)=>(
-          <li key={`link-${items}${index}`} onClick={()=> setToggle(false)}
-          className=' app__flex p-text'>
-            <a href={`#${items}`}>{items}</a>
-          </li>
-        ))}
-      </ul>
-          </motion.div>
-        ): (
-            <HiMenuAlt4 onClick={()=> setToggle(true)} />
-        )
+          {toggle ? (
+            <motion.div
+            whileInView={{ x:[300, 0]}}
+            transition={{duration:0.85,ease: 'easeOut'}}
+            >
+              <HiX onClick={()=> setToggle(false)}/>
+              <ul > 
+          {['Home' , 'About', 'Work', 'Skills', 'Contact'].map((items,index)=>(
+            <li key={`link-${items}${index}`} onClick={()=> setToggle(false)}
+            className=' app__flex p-text'>
+              <a href={`#${items}`}>{items}</a>
+            </li>
+          ))}
+          </ul>
+              </motion.div>
+            ): (
+                <HiMenuAlt4 onClick={()=> setToggle(true)} />
+            )
 
-        }
-        </div>
+            }
+      </div>
     </nav>
   )
 }

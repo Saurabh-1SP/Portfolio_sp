@@ -4,7 +4,6 @@ import "react-tooltip/dist/react-tooltip.css";
 import {motion} from 'framer-motion'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
-import { images } from '../../constants'
 import './Work.scss'
 
 const Work = () => {
@@ -12,13 +11,13 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1 })
   const [activeFilter, setActiveFilter] = useState('All');
   const [works, setWorks] = useState([])
-  const [filterWork, setFilterWork] = useState([])
+  const [filterWork, setFilterWork] = useState( [])
 
 
   useEffect(() => {
     const fetchProjects = async () =>{
       try {
-        const response = await fetch('http://localhost:8080/api/v1/posts',{
+        const response = await fetch('https://sp-tem0.onrender.com/api/v1/posts',{
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -29,8 +28,6 @@ const Work = () => {
           const result = await response.json();
           setFilterWork(result.data)
           setWorks(result.data)
-          console.log(`this work ${works}`)
-          console.log(`this filterwork ${filterWork}`)
         } else {console.log('this is error')}
       } catch (error) {
         console.log(error)
@@ -38,12 +35,12 @@ const Work = () => {
     }
     
     fetchProjects();
+    // useState(()=>{
+    //   setFilterWork(works)
+    // })
   },[])
   
 
-  useState(()=>{
-    setFilterWork(works)
-  })
 
   
 const handleWorkFilter = (item) =>{
@@ -80,25 +77,25 @@ const handleWorkFilter = (item) =>{
       transition={{duration: 0.5, delayChildren: 0.5}}
       className="app__work-portfolio"
       >
-        {filterWork.map((work,index)=> (
+        {filterWork?.map((work,index)=> (
           <div className='app__work-item app__flex' key={index}>
             <div className='app__work-img app__flex'>
               <img src={work.image} alt={work.title} />
               <motion.div
-              whileHover={{opacity:[0,1]}}
+              // whileHover={{opacity:[0,1]}}
               transition={{duration:0.25, ease:'easeInOut', staggerChildren:0.5}}
-              className="app__work-hover app__flex"
+              className="app__work-hover app__flex app__work-hover_hover"
               >
-                <a href={work.github} target='_blank'>
+                <a href={work.live} target='_blank'>
                   <motion.div
                   whileHover={{scale: [1,0.9]}}
                   transition={{duration: 0.25}}
-                  className='app__flex'
+                  className='app__flex app__work-hover_hover'
                   >
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.live} target='_blank'>
+                <a href={work.github} target='_blank'>
                   <motion.div
                   whileHover={{scale: [1,0.9]}}
                   transition={{duration: 0.25}}

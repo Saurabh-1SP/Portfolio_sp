@@ -161,3 +161,13 @@
         top: -25px;
     }
 }
+
+.app__work-hover_hover{
+    &:hover{
+        opacity: 1;
+    }
+
+    @media screen and (max-width:750px) {
+        opacity: 1;
+    }
+}
