@@ -48,6 +48,7 @@ import gpt from '../assets/GPt.png'
 import typesrcript from '../assets/typescript.jpeg'
 import yariga from '../assets/Yariga.png'
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   email,
   mobile,
