@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "react-tooltip/dist/react-tooltip.css";
 import {motion} from 'framer-motion'
-import {Tooltip} from 'react-tooltip'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
-import { images } from '../../constants';
 import './Skills.scss'
 
 const Skills = () => {

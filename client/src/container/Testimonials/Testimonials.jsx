@@ -1,5 +1,4 @@
-import React,{useState,useEffect} from 'react'
-import {motion} from 'framer-motion'
+import React,{useState} from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
@@ -30,25 +29,6 @@ const Testimonials = () => {
     //     feedback:'I am Backend Developer with the passion to make beautiful websites and function web application.'
     // }
   ]
-
-    const brands = [
-        {
-            name: 'Bolt',
-            imgUrl: images.bolt
-        },
-        {
-            name: 'Asus',
-            imgUrl: images.asus
-        },
-        {
-            name: 'Amazon',
-            imgUrl: images.amazon
-        },
-        {
-            name: 'Skype',
-            imgUrl: images.skype
-        },
-    ]
   const test = testimonials[currentIndex]
   
   return (

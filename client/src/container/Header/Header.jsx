@@ -6,16 +6,16 @@ import {motion} from 'framer-motion'
 import {images} from '../../constants'
 
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0,1],
-    opacity: [0,1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut'
-    }
-  }
-}
+// const scaleVariants = {
+//   whileInView: {
+//     scale: [0,1],
+//     opacity: [0,1],
+//     transition: {
+//       duration: 1,
+//       ease: 'easeInOut'
+//     }
+//   }
+// }
 
 const Header = () => {
   return (

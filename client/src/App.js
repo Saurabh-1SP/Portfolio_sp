@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import { Header,About,Work,Skills,Testimonials,Footer} from './container';
 import { Navbar } from './component'

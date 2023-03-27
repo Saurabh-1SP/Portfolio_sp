@@ -93,6 +93,6 @@ export default {
   express,
   lion,
   gpt,
-  typescript,
+  typesrcript,
   yariga
 };
