@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react'
 import {AiFillEye, AiFillGithub} from 'react-icons/ai'
 import "react-tooltip/dist/react-tooltip.css";
 import {motion} from 'framer-motion'
-import {CircularProgress, Skeleton} from '@mui/material'
+import {CircularProgress} from '@mui/material'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
 import './Work.scss'
