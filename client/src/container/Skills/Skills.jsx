@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import "react-tooltip/dist/react-tooltip.css";
 import {motion} from 'framer-motion'
+import {CircularProgress} from '@mui/material'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
 import './Skills.scss'
 
 const Skills = () => {
 
-    const [skills, setSkills] = useState([])
+    const [skills, setSkills] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
       const fetchProjects = async () =>{
+        setIsLoading(true);
         try {
           const response = await fetch('https://sp-tem0.onrender.com/api/v1/skills',{
             method: 'GET',
@@ -26,6 +29,7 @@ const Skills = () => {
         } catch (error) {
           console.log(error)
         }
+        setIsLoading(false);
       }
       
       fetchProjects();
@@ -39,19 +43,23 @@ const Skills = () => {
 
       <div className="app__skills-container">
         <motion.div className='app__skills-list'>
-          {skills.map((skill,index) =>(
-            <motion.div
-            whileInView={{opacity: [0,1]}}
-            transition={{duration: 0.5}}
-            className='app__skills-items app__flex'
-            key={skill.name+index}
-            >
-              <div className='app__flex'>
-                <img src={skill.image} alt={skill.name}/>
-              </div>
-              <p className="p-text">{skill.name}</p>
-            </motion.div>
-          ))}
+          {isLoading ? <CircularProgress/> : 
+            <>
+              {skills.map((skill,index) =>(
+                <motion.div
+                whileInView={{opacity: [0,1]}}
+                transition={{duration: 0.5}}
+                className='app__skills-items app__flex'
+                key={skill.name+index}
+                >
+                  <div className='app__flex'>
+                    <img src={skill.image} alt={skill.name}/>
+                  </div>
+                  <p className="p-text">{skill.name}</p>
+                </motion.div>
+              ))}
+            </>
+          }
         </motion.div>
 
 
