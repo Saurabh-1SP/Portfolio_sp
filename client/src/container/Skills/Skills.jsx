@@ -1,39 +1,83 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "react-tooltip/dist/react-tooltip.css";
 import {motion} from 'framer-motion'
 import {CircularProgress} from '@mui/material'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
 import './Skills.scss'
+import { html, javascript,css, sass, nodejs, express, redux, mongodb, mui, react } from '../../assets/skillImg';
 
 const Skills = () => {
 
-    const [skills, setSkills] = useState([]);
-    const [isLoading, setIsLoading] = useState(false)
+  const [isLoading] = useState(false)
+  const skills = [
+    {
+      name: 'React',
+      image: react
+    },
+    {
+      name: 'JavaScript',
+      image: javascript
+    },
+    {
+      name: 'HTML',
+      image: html
+    },
+    {
+      name: 'CSS',
+      image: css
+    },
+    {
+      name: 'SASS',
+      image: sass
+    },
+    {
+      name: 'Node JS',
+      image: nodejs
+    },
+    {
+      name: 'Express JS',
+      image: express
+    },
+    {
+      name: 'Redux',
+      image: redux
+    },
+    {
+      name: 'MongoDB',
+      image: mongodb
+    },
+    {
+      name: 'MUI',
+      image: mui
+    },
+  ]
+  
+    // const [skills, setSkills] = useState([]);
 
-    useEffect(() => {
-      const fetchProjects = async () =>{
-        setIsLoading(true);
-        try {
-          const response = await fetch('https://sp-tem0.onrender.com/api/v1/skills',{
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            }
-          })
+    // useEffect(() => {
+    //   const fetchProjects = async () =>{
+    //     setIsLoading(true);
+    //     try {
+    //       const response = await fetch('https://sp-tem0.onrender.com/api/v1/skills',{
+    //         method: 'GET',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         }
+    //       })
     
-          if(response.ok){
-            const result = await response.json();
-            setSkills(result.data)
-          } else {console.log('this is error')}
-        } catch (error) {
-          console.log(error)
-        }
-        setIsLoading(false);
-      }
+    //       if(response.ok){
+    //         const result = await response.json();
+    //         setSkills(result.data)
+    //       } else {console.log('this is error')}
+    //     } catch (error) {
+    //       console.log(error)
+    //     }
+    //     setIsLoading(false);
+    //   }
       
-      fetchProjects();
-    },[])
+    //   fetchProjects();
+    // },[])
     
   return (
     <div>
