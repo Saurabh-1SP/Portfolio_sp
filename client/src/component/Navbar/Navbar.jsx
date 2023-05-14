@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { HiMenuAlt4, HiX} from 'react-icons/hi'
+import { HiBriefcase, HiChat, HiHome, HiLightBulb, HiMenuAlt4, HiPhone, HiX} from 'react-icons/hi'
 import {motion} from 'framer-motion'
 import './Navbar.scss'
 
@@ -18,10 +18,12 @@ Navbar = () => {
         {/* <img src={images.pasi} alt="" /> */}
       </div>
       <ul className='app__navbar-links'> 
-        {['Home' , 'About', 'Work', 'Skills', 'Contact'].map((items,index)=>(
+        {['Home' , 'About', 'Works', 'Skills', 'Contact'].map((items,index)=>(
           <li key={`link-${items}${index}`}
           className=' app__flex p-text'>
-            <div/>
+            <div className='navicons_container'>
+              {items === 'Home' ? <HiHome/> : items === 'About' ? <HiChat/> : items === 'Contact' ? <HiPhone/> : items === 'Works' ? <HiBriefcase/> : items === 'Skills' && <HiLightBulb/>}
+            </div>
             <a href={`#${items}`}>{items}</a>
           </li>
         ))}

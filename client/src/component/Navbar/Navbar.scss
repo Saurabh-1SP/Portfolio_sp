@@ -35,18 +35,18 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-
+    
     li{
         margin: 0 1rem;
         cursor: pointer;
         flex-direction: column;
-
-        div{
-            width: 5px;
-            height: 5px;
-            background: transparent;
-            border-radius: 50%;
-            margin-bottom:5px
+        
+        .navicons_container{
+            position: absolute;
+        }
+        .navicons_container svg{
+            color: transparent;
+            transition: all 0.3s ease-in-out;
         }
         a{
             color: var(--gray-color);
@@ -55,14 +55,17 @@
             text-transform: uppercase;
             font-weight: 500;
             transition: all 0.3s ease-in-out;
-
-            &:hover{
-                color: var(--secondary-color)
-            }
+            
+            // &:hover{
+                //     color: var(--secondary-color)
+                // }
         }
         &:hover{
-            div{
-                background: var(--secondary-color);
+            .navicons_container svg, a{
+                color: var(--secondary-color);
+            }
+            a{
+                margin-top: 1.7rem;
             }
         }
     }
