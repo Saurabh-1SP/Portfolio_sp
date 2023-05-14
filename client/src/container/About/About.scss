@@ -1,5 +1,5 @@
 .app__about{
-    margin-top: 1rem;
+    margin-top: 0rem;
 
     @media screen and (min-width:1440px) {
         margin-top: 3rem;
@@ -12,7 +12,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 2rem;
+    // margin-top: 2rem;
 }
 
 .app__profile-item{
@@ -45,11 +45,11 @@
     }
 
     @media screen and (max-width:1200px) {
-        width: 150px;
+        width: auto;
         margin: 1rem;
         img{
-            width: auto;
-            height: 120px;
+            // width: 225px;
+            // height: 120px;
         }
     }
 }
