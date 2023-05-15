@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
+// import React,{useState} from 'react'
+// import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
 import { images } from '../../constants'
@@ -9,11 +9,11 @@ const Testimonials = () => {
 
 //   const [brands, setBrands] = useState([]);
 //   const [testimonials, setTestimonials] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleClick = (index) => {
-    setCurrentIndex(index)
-  }
+  // const handleClick = (index) => {
+  //   setCurrentIndex(index)
+  // }
 
   const testimonials = [
     {
@@ -29,7 +29,7 @@ const Testimonials = () => {
     //     feedback:'I am Backend Developer with the passion to make beautiful websites and function web application.'
     // }
   ]
-  const test = testimonials[currentIndex]
+  // const test = testimonials[currentIndex]
   
   return (
     <>
@@ -46,14 +46,14 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="app__testimonial-btns app__flex">
+      {/* <div className="app__testimonial-btns app__flex">
         <div className="app__flex" onClick={ () => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
         <HiChevronLeft/>
         </div>
         <div className="app__flex"  onClick={ () => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
         <HiChevronRight/>
         </div>
-      </div>
+      </div> */}
       </>
     )}
 

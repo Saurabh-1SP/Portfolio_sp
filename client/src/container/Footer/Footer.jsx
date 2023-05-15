@@ -29,7 +29,7 @@ const Footer = () => {
         setLoading(true);
   
         try {
-          const response = await fetch('https://portfolio-8jht.onrender.com/comment/post',{
+          const response = await fetch('https://sp-tem0.onrender.com/comment/post',{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const Footer = () => {
           console.log('errrrrrrrrrr')
           await response.json();
         } catch (error) {
-          alert('fuck')
+          console.log(error)
         } finally {
           setLoading(false);
           setIsFormSubmitted(true)
