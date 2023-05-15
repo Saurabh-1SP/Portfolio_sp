@@ -30,6 +30,7 @@ const Testimonials = () => {
     // }
   ]
   // const test = testimonials[currentIndex]
+  const test = testimonials[0]
   
   return (
     <>
