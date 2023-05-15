@@ -16,7 +16,7 @@
 }
 
 .app__profile-item{
-    width: 190px;
+    width: 250px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -45,11 +45,13 @@
     }
 
     @media screen and (max-width:1200px) {
-        width: auto;
         margin: 1rem;
         img{
             // width: 225px;
             // height: 120px;
         }
+    }
+    @media screen and (max-width:500px) {
+        width: auto;
     }
 }

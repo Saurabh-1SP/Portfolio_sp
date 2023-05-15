@@ -2,9 +2,9 @@ import email from '../assets/email.png';
 import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';
 
-import about01 from '../assets/about01.jpeg';
+import about01 from '../assets/about01.jpg';
 import about02 from '../assets/about02.png';
-import about03 from '../assets/about03.jpg';
+import about03 from '../assets/about03.png';
 
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
