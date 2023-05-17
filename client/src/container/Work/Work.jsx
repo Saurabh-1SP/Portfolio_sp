@@ -115,7 +115,7 @@ const handleWorkFilter = (item) =>{
 }
 
   return (
-    <div className='app__work'>      <h2 className='head-text'>My Creative <span>Profolio</span> Section</h2>
+    <div className='app__work'>      <h2 className='head-text'>My <span>Websites</span></h2>
       <div className='app__work-filter'>
         {['All','UI/UX', 'Web App', 'Mobile App','React JS',].map((item,index)=>(
           <div
