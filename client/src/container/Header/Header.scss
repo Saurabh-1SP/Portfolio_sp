@@ -213,9 +213,24 @@
         box-shadow: 0 0 20px rgba(0,0,0,0.1);
         transition: all 0.3s ease-in-out;
         z-index: 3;
+        // background-image: linear-gradient(90deg,
+        // var(--primary-color) 0%,
+        // var(--primary-color) 50%,
+        // #a5acf3 50%,
+        // #a5acf3 100%);
+        // background-size: 200%;
+        // transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+        //     color .2s linear;
+        // transition-delay: 0.0s, 0.15s;
 
         &:hover{
             transform: scale(1.1);
+            cursor: pointer;
+            // background-position: -100% 100%;
+
+            // p{
+            //     color: white;
+            // }
         }
     }
     

@@ -11,7 +11,7 @@ const About = () => {
 
     const abouts = [
         {
-            tittle: 'Backend Developer',
+            tittle: 'Backend Development',
             // description: ` I'm a backend developer with a passion for solving complex problems and delivering effective solutions. I have experience working with technologies such as Node.js, Express, and MongoDB, and I excel at building scalable, secure, and efficient server-side applications. I have a strong understanding of server-side scripting, and I'm always seeking to improve my skills and stay current with the latest industry advancements. Whether working on a simple backend service or a complex system, I bring my best to every project and strive to exceed expectations.`,
             description: `💻 When it comes to backend development, I bring a versatile skill set to the table that allows me to build robust and efficient web applications. With a deep understanding of languages like Python, Java, or Node.js, I have the power to create the backbone of digital experiences.
 
@@ -25,7 +25,7 @@ const About = () => {
             imgUrl: images.about02
         },
         {
-            tittle: 'React Developer',
+            tittle: 'React Development',
             // description: `I am a React developer with a passion for crafting user-friendly web experiences. My expertise in JavaScript, HTML, and CSS allows me to turn ideas into polished, functional interfaces. I'm constantly seeking new ways to push the limits of what's possible, always striving to learn and grow as a developer. Whether working on a simple site or a complex application, I bring my best to every project and always aim to deliver outstanding results.`,
             description: `⚛️ As a React developer, I possess a strong command of HTML, CSS, and JavaScript, making me adept at building interactive and engaging user interfaces. Let's bring designs to life and captivate users with visually stunning web applications! 💡🚀
 
@@ -33,11 +33,11 @@ const About = () => {
             
             🔄 Experience with state management libraries like Redux or MobX allows me to efficiently manage and synchronize data across the application, ensuring a smooth and seamless user experience. Let's keep the state in check and create reliable applications! 💪🌐
             
-            🎉 React ecosystem is ever-evolving, and I keep up with the latest trends and best practices. From React Hooks to React Router, I stay updated to deliver the most efficient and modern solutions. Let's stay ahead of the curve and push the boundaries of React development! 📚`,
+            🎉 React ecosystem is ever-evolving, and I keep up with the latest trends and best practices. From React Hooks to React Router, I stay updated to deliver the most efficient and modern solutions. Let's stay ahead of the curve and push the boundaries of React development! 📚.`,
             imgUrl: images.about01
         },
         {
-            tittle: 'Frontend Developer',
+            tittle: 'Frontend Development',
             // description: ` I'm a frontend developer with a focus on React. I have a passion for creating beautiful and intuitive user interfaces that deliver a great experience. With a strong foundation in JavaScript, HTML, and CSS, I bring ideas to life and make sure that they work seamlessly for users. I'm always looking for ways to improve my skills and stay up-to-date with the latest trends in frontend development. Whether working on a small project or a complex application, I bring my best to every task and strive to exceed expectations.`,
             description: `🎨 When it comes to frontend development, I bring a diverse set of skills to the table that helps me create visually stunning and interactive user interfaces. I have a strong command of HTML5, CSS3, and JavaScript, which allows me to craft engaging and responsive web applications that captivate users. 💻
 
@@ -49,7 +49,7 @@ const About = () => {
             
             🎨 In translating wireframes into pixel-perfect designs, I rely on design tools like Adobe Photoshop or Sketch to bring out the best in each project. Additionally, I value collaboration and efficient code management, using version control systems like Git to streamline teamwork. 🔄
             
-            📚 Keeping up with the ever-evolving frontend landscape is crucial, so I stay up-to-date with emerging technologies and trends. It's an ongoing journey of learning and exploring new possibilities, and I'm always excited to expand my skillset. 🌟`,
+            📚 Keeping up with the ever-evolving frontend landscape is crucial, so I stay up-to-date with emerging technologies and trends. It's an ongoing journey of learning and exploring new possibilities, and I'm always excited to expand my skillset 🌟.`,
             imgUrl: images.about03
         },
     ]
@@ -61,14 +61,16 @@ const About = () => {
         {abouts.map((about, index)=>(
           <motion.div
           whileInView={{opacity:1}}
-          whileHover={{scale:1.1}}
+          whileHover={{scale:1.04}}
           transition={{duration:0.5, type: 'tween'}}
           key={about.tittle+index}
           className="app__profile-item"
           >
             <img src={about.imgUrl} alt={about.tittle}/>
-            <h2 className='bold-text' style={{marginTop:20}} >{about.tittle}</h2>
-            <p className='p-text' style={{marginTop:20}} >{about.description}</p>
+            <div>
+              <h2 className='bold-text' style={{marginTop:20}} >{about.tittle}</h2>
+              <p className='p-text' style={{marginTop:20}} >{about.description}</p>
+            </div>
           </motion.div>
         ))}
       </div>
