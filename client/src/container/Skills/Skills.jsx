@@ -5,18 +5,13 @@ import {CircularProgress} from '@mui/material'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
 import './Skills.scss'
-<<<<<<< HEAD
 import { html, javascript,css, sass, nodejs, express, redux, mongodb, mui, react, python } from '../../assets/skillImg';
-=======
-import { html, javascript,css, sass, nodejs, express, redux, mongodb, mui, react } from '../../assets/skillImg';
->>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
 
 const Skills = () => {
 
   const [isLoading] = useState(false)
   const skills = [
     {
-<<<<<<< HEAD
       name: 'JavaScript',
       image: javascript
     },
@@ -25,19 +20,10 @@ const Skills = () => {
       image: python
     },
     {
-=======
->>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
       name: 'React',
       image: react
     },
     {
-<<<<<<< HEAD
-=======
-      name: 'JavaScript',
-      image: javascript
-    },
-    {
->>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
       name: 'HTML',
       image: html
     },

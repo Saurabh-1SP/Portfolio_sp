@@ -18,7 +18,6 @@ Navbar = () => {
         {/* <img src={images.pasi} alt="" /> */}
       </div>
       <ul className='app__navbar-links'> 
-<<<<<<< HEAD
         {['Home' , 'About', 'Work', 'Skills', ].map((items,index)=>(
           <li key={`link-${items}${index}`}
           className=' app__flex p-text'>
@@ -28,15 +27,6 @@ Navbar = () => {
                 {items === 'Home' ? <HiHome/> : items === 'About' ? <HiChat/> : items === 'Contact' ? <HiPhone/> : items === 'Works' ? <HiBriefcase/> : items === 'Skills' && <HiLightBulb/>}
               </div>
             </a>
-=======
-        {['Home' , 'About', 'Works', 'Skills', ].map((items,index)=>(
-          <li key={`link-${items}${index}`}
-          className=' app__flex p-text'>
-            <div className='navicons_container'>
-              {items === 'Home' ? <HiHome/> : items === 'About' ? <HiChat/> : items === 'Contact' ? <HiPhone/> : items === 'Works' ? <HiBriefcase/> : items === 'Skills' && <HiLightBulb/>}
-            </div>
-            <a href={`#${items}`}>{items}</a>
->>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
           </li>
         ))}
       </ul>

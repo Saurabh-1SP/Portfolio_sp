@@ -22,10 +22,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-<<<<<<< HEAD
     cursor: pointer;
-=======
->>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
 
     img{
         width: 200px;
@@ -59,29 +56,19 @@
             text-transform: uppercase;
             font-weight: 500;
             transition: all 0.3s ease-in-out;
-<<<<<<< HEAD
             p{
             transition: all 0.3s ease-in-out;
             }
-=======
->>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
             
             // &:hover{
                 //     color: var(--secondary-color)
                 // }
         }
         &:hover{
-<<<<<<< HEAD
             .navicons_container svg, a p{
                 color: var(--secondary-color);
             }
             a p{
-=======
-            .navicons_container svg, a{
-                color: var(--secondary-color);
-            }
-            a{
->>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
                 margin-top: 1.7rem;
             }
         }
