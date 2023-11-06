@@ -127,11 +127,22 @@
       img {
         width: 20px;
         height: 20px;
+<<<<<<< HEAD
+=======
+        color: var(--gray-color);
+>>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
         filter: grayscale(1);
       }
   
       &:hover {
         border-color: var(--secondary-color);
+<<<<<<< HEAD
+=======
+  
+        svg {
+          color: var(--white-color);
+        }
+>>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
       }
   
       @media screen and (min-width: 2000px) {

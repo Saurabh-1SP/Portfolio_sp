@@ -12,7 +12,10 @@ import circle from '../assets/circle.svg';
 import preview from '../assets/preview.png'
 import upwork from '../assets/upwork-icon.svg'
 import freelancer from '../assets/freelancer-icon.svg'
+<<<<<<< HEAD
 import github from '../assets/github.svg'
+=======
+>>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
 import SaurabhLogo from '../assets/SaurabhLogo.png'
 import lion from '../assets/lion.png'
 
@@ -28,7 +31,10 @@ export default {
   circle,
   preview,
   upwork,
+<<<<<<< HEAD
   github,
+=======
+>>>>>>> 87e8b5aa488b0c03f218689acdab6a18620c6e91
   freelancer,
   SaurabhLogo,
   lion,
