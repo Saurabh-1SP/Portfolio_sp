@@ -3,6 +3,9 @@ import {AiFillEye, AiFillGithub} from 'react-icons/ai'
 import "react-tooltip/dist/react-tooltip.css";
 import {motion} from 'framer-motion'
 import {CircularProgress} from '@mui/material'
+import {IoLogoJavascript} from 'react-icons/io'
+import {FaNode, FaReact} from 'react-icons/fa6'
+import {SiExpress, SiMongodb, SiTypescript} from 'react-icons/si'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
 import { Dalle, GPT, HooBank, Memories, Sumz, Yariga } from '../../assets/workImg'
@@ -15,7 +18,8 @@ const works = [
     live: 'https://yariga-sp.netlify.app',
     github: 'https://github.com/Saurabh-1SP/Yariga',
     description: 'This MERN Stack website is for Sales or Renting properties, it has a dashboard, profiles, agents, login functions, etc. On this website, you can create properties to sell or rent you need to log in.',
-    tags: ['All','React JS','Web App']
+    tags: ['All','React JS','Web App'],
+    tech: ['React','JS','TypeScript','Node', 'Express', 'MongoDB',]
   },
   {
     image: GPT,
@@ -23,7 +27,8 @@ const works = [
     live: 'https://gtp3-sp.netlify.app',
     github: 'https://github.com/Saurabh-1SP/GPT3',
     description: 'I fond figma design for chapgpt website. So i made responsive desing using reactjs',
-    tags: ['All','UI/UX','React JS']
+    tags: ['All','UI/UX','React JS'],
+    tech: ['React','JS']
   },
   {
     image: Dalle,
@@ -31,7 +36,8 @@ const works = [
     live: 'https://dalle-sp.netlify.app/',
     github: 'https://github.com/Saurabh-1SP/Dall-e',
     description: 'This website is the clone of the Dalle so it has all features like dalle. And i also add community area where people can watch other images and prompt, they can post there imagaes.There is search bar to search prompt or images.',
-    tags: ['All','React JS','Web App']
+    tags: ['All','React JS','Web App'],
+    tech: ['React','JS','Node', 'Express', 'MongoDB',]
   },
   {
     image: HooBank,
@@ -39,7 +45,8 @@ const works = [
     live: 'https://hoo-bank-sp.netlify.app/',
     github: 'https://github.com/Saurabh-1SP/Hoo-bank',
     description: 'This the responsive design of the hoo-bank.',
-    tags: ['All','React JS','UI/UX']
+    tags: ['All','React JS','UI/UX'],
+    tech: ['React','JS']
   },
   {
     image: Memories,
@@ -47,7 +54,8 @@ const works = [
     live: 'https://memories-sp.netlify.app/',
     github: 'https://github.com/Saurabh-1SP/Memories',
     description: "It's the website where people post memorable memories so that they can share them with other. It has Like, Delete, Post, Edit, etc. with a responsive design for all devices. People can LogIN and LogOUT with Google or default. Did I meItion that it has Recommend feature also and More Features are coming soon...",
-    tags: ['All','React JS','Web App']
+    tags: ['All','React JS','Web App'],
+    tech: ['React','JS','Node', 'Express', 'MongoDB',]
   },
   {
     image: Sumz,
@@ -55,7 +63,8 @@ const works = [
     live: 'https://sumz-sp.netlify.app/',
     github: 'https://github.com/Saurabh-1SP/sumz',
     description: 'This website takes the link of the article that you want to summarize and summarizes the article using the gpt-4. It has a history of the articles that are summarized and click-to-copy links of the articles. And with the modern UI/UX.',
-    tags: ['All','React JS']
+    tags: ['All','React JS'],
+    tech: ['React','JS','Node']
   },
 ]
 const Work = () => {
@@ -167,13 +176,20 @@ const handleWorkFilter = (item) =>{
                         </a>
                       </motion.div>
                     </div>
-                    <div className='app__work-content app__flex'>
-                      <h4 className="bold-text">{work.title}</h4>
-                      <p className="p-text" style={{marginTop: 10,overflowY: 'scroll' }}>{work.description}</p>
-                      <div className="app__work-tag app__flex">
-                        <p className="p-text">{work.tags[1]}</p>
+                      <div className='app__work-content app__flex'>
+                        <div className='app__work_badge-container'>
+                          {work?.tech.map((tech)=>(
+                            <div className="app__work-badge app__flex">
+                              {tech === 'JS' ? <IoLogoJavascript /> : tech === 'React' ? <FaReact/> : tech === 'Node' ? <FaNode/> : tech === 'Express' ? <SiExpress/> : tech === 'MongoDB' ? <SiMongodb/> : tech === 'TypeScript' ? <SiTypescript/> : ''}
+                            </div>
+                          ))}
+                        </div>
+                        <h4 className="bold-text">{work.title}</h4>
+                        <p className="p-text" style={{marginTop: 10,overflowY: 'scroll' }}>{work.description}</p>
+                        <div className="app__work-tag app__flex">
+                          <p className="p-text">{work.tags[1]}</p>
+                        </div>
                       </div>
-                    </div>
                   </div>
                 ))} 
               </>: (

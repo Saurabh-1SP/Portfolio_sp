@@ -24,7 +24,7 @@ Navbar = () => {
             <a href={`#${items}`} className='app__flex'>
               <p>{items}</p>
               <div className='navicons_container'>
-                {items === 'Home' ? <HiHome/> : items === 'About' ? <HiChat/> : items === 'Contact' ? <HiPhone/> : items === 'Works' ? <HiBriefcase/> : items === 'Skills' && <HiLightBulb/>}
+                {items === 'Home' ? <HiHome/> : items === 'About' ? <HiChat/> : items === 'Contact' ? <HiPhone/> : items === 'Work' ? <HiBriefcase/> : items === 'Skills' && <HiLightBulb/>}
               </div>
             </a>
           </li>

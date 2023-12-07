@@ -5,7 +5,7 @@ import {CircularProgress} from '@mui/material'
 
 import { AppWraper, motionWrap } from '../../Wrappers'
 import './Skills.scss'
-import { html, javascript,css, sass, nodejs, express, redux, mongodb, mui, react, python } from '../../assets/skillImg';
+import { html, javascript,css, sass, nodejs, express, redux, mongodb, mui, react, python, typescript } from '../../assets/skillImg';
 
 const Skills = () => {
 
@@ -14,6 +14,10 @@ const Skills = () => {
     {
       name: 'JavaScript',
       image: javascript
+    },
+    {
+      name: 'TypeScript',
+      image: typescript
     },
     {
       name: 'Python',
