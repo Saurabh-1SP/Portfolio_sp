@@ -21,22 +21,20 @@ const Footer = () => {
   const handleChangeInput = event => {
     const { name, value } = event.target;
     setFormData(prevState => ({ ...prevState, [name]: value }));
-    console.log(formData)
   };
 
   const handleSubmit = async () => {
     if(formData){
         setLoading(true);
-  
+  // ''
         try {
-          const response = await fetch('https://sp-tem0.onrender.com/comment/post',{
+          const response = await fetch('https://sp-tem0.onrender.com/message',{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData)
           })
-          console.log('errrrrrrrrrr')
           await response.json();
         } catch (error) {
           console.log(error)
@@ -82,7 +80,7 @@ const Footer = () => {
         </div>
         {/* <div className="app__footer-card">
           <img src={images.mobile} alt="mobile" />
-          <a href="tel: +1 (123) 456-789" className='p-text'>+1 (123) 456-789</a>
+          <a href="" className='p-text'></a>
         </div> */}
       </div>
       

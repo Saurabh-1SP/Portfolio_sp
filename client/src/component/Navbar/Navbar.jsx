@@ -18,7 +18,7 @@ Navbar = () => {
         {/* <img src={images.pasi} alt="" /> */}
       </div>
       <ul className='app__navbar-links'> 
-        {['Home' , 'About', 'Work', 'Skills', ].map((items,index)=>(
+        {['Home' , 'About', 'Work', 'Skills', 'Contact' ].map((items,index)=>(
           <li key={`link-${items}${index}`}
           className=' app__flex p-text'>
             <a href={`#${items}`} className='app__flex'>
