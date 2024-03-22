@@ -82,7 +82,8 @@
         }
 
         @media screen and (min-width:2000px) {
-            width: 470px;
+            width: 300px;
+            height: 560px;
             padding: 1.25rem;
             border-radius: 0.75rem;
         }
@@ -95,7 +96,7 @@
 }
 
 .app__work-img{
-    width: 100%;
+    // width: 100%;
     max-height: 230px;
     position: relative;
 
