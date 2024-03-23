@@ -82,7 +82,7 @@ const Work = () => {
       setIsLoading(true);
 
       try {
-        const response = await fetch('https://sp-tem0.onrender.com/api/v1/posts',{
+        const response = await fetch('https://sp-tem0.onrender.com/projects',{
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
