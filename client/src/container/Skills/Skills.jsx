@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import "react-tooltip/dist/react-tooltip.css";
 import {motion} from 'framer-motion'
 import {CircularProgress} from '@mui/material'
@@ -66,8 +66,19 @@ const Skills = () => {
     // useEffect(() => {
     //   const fetchProjects = async () =>{
     //     setIsLoading(true);
+
+
+    //     // try {
+    //     //   const response = await fetch('https://sp-tem0.onrender.com/api/v1/skills',{
+    //     //     method: 'GET',
+    //     //     headers: {
+    //     //       'Content-Type': 'application/json',
+    //     //     }
+    //     //   })
+
+    //     // Testing server response
     //     try {
-    //       const response = await fetch('https://sp-tem0.onrender.com/api/v1/skills',{
+    //       const response = await fetch('http://localhost:8080/skills',{
     //         method: 'GET',
     //         headers: {
     //           'Content-Type': 'application/json',

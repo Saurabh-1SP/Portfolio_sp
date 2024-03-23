@@ -4,8 +4,8 @@ import mongoose from 'mongoose';
 import * as dotenv from 'dotenv'
 import cors from 'cors'
 
-// import postRoutes from './routes/post.js'
-// import skillRoutes from './routes/skill.js'
+import postRoutes from './routes/post.js'
+import skillRoutes from './routes/skill.js'
 import messageRoute from './routes/message.js'
 
 const app = express();
@@ -19,6 +19,8 @@ dotenv.config()
 // app.use('/api/v1/posts',postRoutes)
 // app.use('/api/v1/skills',skillRoutes)
 app.use('/message',messageRoute)
+app.use('/skills',skillRoutes)
+app.use('/projects',postRoutes)
 
 // app.get('/api/v1/posts', async (req,res)=>{
 //     res.send('Hello world')
@@ -27,5 +29,5 @@ app.use('/message',messageRoute)
 const ConnectionUrl = process.env.MONGODB_CLIENT_KEY
 
 mongoose.connect( ConnectionUrl, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then(()=> app.listen(8080, () => console.log(`server running on port: 5000`)))
+    .then(()=> app.listen(8080, () => console.log(`server running on port: 8080`)))
     .catch((error)=> console.log(error));
