@@ -61,7 +61,7 @@ const About = () => {
         {abouts.map((about, index)=>(
           <motion.div
           whileInView={{opacity:1}}
-          whileHover={{scale:1.04}}
+          whileHover={{scale:1.02}}
           transition={{duration:0.5, type: 'tween'}}
           key={about.tittle+index}
           className="app__profile-item"

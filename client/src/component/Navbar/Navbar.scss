@@ -6,15 +6,18 @@
     align-items: center;
 
     padding: 0.5rem 2rem;
-    background: rgba(255,255,255,0.25);
+    // background: rgba(255,255,255,0.25);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.18);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
     position: absolute;
     z-index: 2;
 
     @media screen and (max-width:700px) {
         padding: 0.5rem;
+    }
+    @media screen and (min-width:2000px) {
+        height: 5%;
     }
 }
 
@@ -50,7 +53,7 @@
             transition: all 0.3s ease-in-out;
         }
         a{
-            color: var(--gray-color);
+            // color: var(--gray-color);
             text-decoration: none;
             flex-direction: column;
             text-transform: uppercase;

@@ -141,7 +141,7 @@ const handleWorkFilter = (item) =>{
           <div
           key={index}
           onClick={()=> handleWorkFilter(item)}
-          className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+          className={`app__work-filter-item app__flex p-text app__whitebg ${activeFilter === item ? 'item-active' : ''}`}
           >
             {item}
           </div>
@@ -159,7 +159,7 @@ const handleWorkFilter = (item) =>{
             {filterWork.length ? 
               <>
                 {filterWork?.map((work,index)=> (
-                  <div className='app__work-item app__flex' key={index}>
+                  <div className='app__work-item app__flex app__whitebg hover_box_shadow' key={index}>
                     <div className='app__work-img app__flex'>
                       <img src={work.image} alt={work.title} />
                       <motion.div
@@ -189,7 +189,7 @@ const handleWorkFilter = (item) =>{
                     </div>
                       <div className='app__work-content app__flex'>
                         <div className='app__work_badge-container'>
-                          {work?.tech.map((tech)=>(
+                          {work.tech.map((tech)=>(
                             <div className="app__work-badge app__flex">
                               {tech === 'JS' ? <IoLogoJavascript /> : tech === 'React' ? <FaReact/> : tech === 'Node' ? <FaNode/> : tech === 'Express' ? <SiExpress/> : tech === 'MongoDB' ? <SiMongodb/> : tech === 'TypeScript' ? <SiTypescript/> : ''}
                             </div>
@@ -197,7 +197,7 @@ const handleWorkFilter = (item) =>{
                         </div>
                         <h4 className="bold-text">{work.title}</h4>
                         <p className="p-text" style={{marginTop: 10,overflowY: 'scroll' }}>{work.description}</p>
-                        <div className="app__work-tag app__flex">
+                        <div className="app__work-tag app__whitebg app__flex">
                           <p className="p-text">{work.tags[1]}</p>
                         </div>
                       </div>

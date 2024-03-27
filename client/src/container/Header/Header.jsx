@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div id='home' className='app__header app__flex'>
-      <div className="area" >
+      <div className="area app__primarybg" >
         <ul className="circles">
           <img src={images.circle} alt="" />
           <img src={images.circle} alt="" />
@@ -37,18 +37,18 @@ const Header = () => {
         </ul>
         <motion.div
         whileInView={{x:[-100,0],opacity:[0,1]}}
-        transition={{duration:0.5}}
+        transition={{duration:0.85, ease: 'easeOut'}}
         className='app__header-info'
         >
           <div className='app__header-badge'>
-            <div className='badge-cmp app_flex'>
+            <div className='badge-cmp  app_flex box_shadow'>
               <span>👋</span>
               <div style={{marginLeft: 20}}>
                 <p className='p-text'>Hello, I am</p>
                 <h1 className='head-text'>Saurabh</h1>
               </div>
             </div>
-            <div className="tag-cmp app__flex">
+            <div className="tag-cmp app__flex box_shadow">
               <p className='p-text'>Web Developer</p>
               <p className='p-text'>Freelancer</p>
             </div>

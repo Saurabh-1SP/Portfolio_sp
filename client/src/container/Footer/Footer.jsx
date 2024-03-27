@@ -26,7 +26,6 @@ const Footer = () => {
   const handleSubmit = async () => {
     if(formData){
         setLoading(true);
-  // ''
         try {
           const response = await fetch('https://sp-tem0.onrender.com/message',{
             method: 'POST',
@@ -116,5 +115,5 @@ const Footer = () => {
 export default AppWraper(
   motionWrap(Footer,'app__footer'),
   'Contact',
-  'app__whitebg'
+  'app__primarybg'
 )

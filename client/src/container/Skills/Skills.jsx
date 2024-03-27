@@ -112,10 +112,10 @@ const Skills = () => {
                 <motion.div
                 whileInView={{opacity: [0,1]}}
                 transition={{duration: 0.5}}
-                className='app__skills-items app__flex'
+                className='app__skills-items app__flex '
                 key={skill.name+index}
                 >
-                  <div className='app__flex'>
+                  <div className='app__flex app__primarybg'>
                     <img src={skill.image} alt={skill.name}/>
                   </div>
                   <p className="p-text">{skill.name}</p>

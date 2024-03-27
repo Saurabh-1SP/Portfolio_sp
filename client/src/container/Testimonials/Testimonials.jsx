@@ -36,7 +36,7 @@ const Testimonials = () => {
     <>
     {testimonials.length &&(
       <>
-      <div className='app__testimonial-item app__flex'>
+      <div className='app__testimonial-item app__whitebg app__flex box_shadow'>
         <img src={test.imgurl} alt='' />
         <div className="app__testimonial-content">
           <p className="p-text">{test.feedback}</p>

@@ -36,12 +36,14 @@
         }
 
         a{
+            color: var(--gray-color);
             font-weight: 500;
             text-decoration: none;
         }
 
         &:hover{
-            box-shadow:  0 0 25px #fef4f5;
+            // box-shadow:  0 0 25px #fef4f5;
+            box-shadow: 0 0 16px rgba(0,0,0,0.2);
         }
 
         @media screen and (max-width:450px) {
@@ -70,6 +72,7 @@
         cursor: pointer;
         background-color: var(--primary-color);
         transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 
         input, textarea{
             width: 100%;
@@ -87,7 +90,8 @@
         }
 
         &:hover{
-            box-shadow: 0 0 25px var(--primary-color);
+            // box-shadow: 0 0 25px var(--primary-color);
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
         }
 
     }
