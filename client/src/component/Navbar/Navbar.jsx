@@ -35,7 +35,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div onClick={handleTheme}>
+      <div onClick={handleTheme} className='app_theme'>
         {darkmode ? <IoIosMoon cursor='pointer' size={25} color='#6b7688' /> : <IoIosSunny cursor='pointer' size={25} color='#858df4' />}
       </div>
       {/* <button onClick={()=>themeChange(darkmode,setDarkmode)}>Dark</button> */}
@@ -44,24 +44,26 @@ const Navbar = () => {
 
           {toggle ? (
             <motion.div
-            whileInView={{ x:[300, 0]}}
-            transition={{duration:0.85,ease: 'easeOut'}}
+              whileInView={{ x:[200, 0]}}
+              transition={{duration:0.85,ease: 'easeOut'}}
             >
               <HiX onClick={()=> setToggle(false)}/>
               <ul > 
-          {['Home' , 'About', 'Work', 'Skills', 'Contact'].map((items,index)=>(
-            <li key={`link-${items}${index}`} onClick={()=> setToggle(false)}
-            className=' app__flex p-text'>
-              <a href={`#${items}`}>{items}</a>
-            </li>
-          ))}
-          </ul>
-              </motion.div>
+                {['Home' , 'About', 'Work', 'Skills', 'Contact'].map((items,index)=>(
+                  <li key={`link-${items}${index}`} onClick={()=> setToggle(false)}
+                  className=' app__flex '>
+                    <a href={`#${items}`}>{items}</a>
+                  </li>
+                ))}
+                <li className='app__flex ' onClick={handleTheme}>
+                    {!darkmode ? 'Light Theme' : "Dark Theme"}
+                </li>
+              </ul>
+            </motion.div>
             ): (
                 <HiMenuAlt4 onClick={()=> setToggle(true)} />
             )
-
-            }
+          }
       </div>
     </nav>
   )
